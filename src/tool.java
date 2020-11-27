@@ -55,4 +55,8 @@ public class tool {
         else return "O";
 
     }
+
+    public static String[] SpiltString(String ok) {
+        return ok.split(",");
+    }
 }

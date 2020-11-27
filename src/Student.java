@@ -8,7 +8,11 @@ public class Student {
     private int Credit;
     private int GPA;
 
-    public Student() {
+    public Student(String surnName, String givenName, String ID, double score, int index) {
+        SurnName = surnName;
+        GivenName = givenName;
+        this.ID = ID;
+        Score.add(index, score);
 
     }
 
@@ -48,8 +52,8 @@ public class Student {
         this.ID = ID;
     }
 
-    public void setScore(ArrayList<Double> score) {
-        Score = score;
+    public void setScore(double score, int index) {
+        Score.add(index, score);
     }
 
     public void setGPA(int GPA) {
