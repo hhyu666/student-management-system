@@ -23,6 +23,10 @@
   <component name="FindBugs-IDEA-Workspace">
     <analyzeAfterCompile>true</analyzeAfterCompile>
     <toolWindowToFront>false</toolWindowToFront>
+    <toolWindowEditorPreview>false</toolWindowEditorPreview>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/AddStudent.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1koVxKu4Ef13aQcJVX38fFLnOwH" />
   <component name="ProjectViewState">
@@ -95,35 +99,35 @@
     </recent_temporary>
   </component>
   <component name="WindowStateProjectService">
-    <state x="634" y="260" key="FileChooserDialogImpl" timestamp="1606367268263">
+    <state x="634" y="260" key="FileChooserDialogImpl" timestamp="1606501247382">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="634" y="260" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606367268263" />
-    <state width="1921" height="298" key="GridCell.Tab.0.bottom" timestamp="1606490213025">
+    <state x="634" y="260" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606501247382" />
+    <state width="1899" height="290" key="GridCell.Tab.0.bottom" timestamp="1606539344781">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1921" height="298" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606407345169" />
-    <state width="1921" height="298" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606490213025" />
-    <state width="1921" height="298" key="GridCell.Tab.0.center" timestamp="1606490213025">
+    <state width="1899" height="290" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606539344781" />
+    <state width="1899" height="290" key="GridCell.Tab.0.center" timestamp="1606539344781">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1921" height="298" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606407345169" />
-    <state width="1921" height="298" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606490213025" />
-    <state width="1921" height="298" key="GridCell.Tab.0.left" timestamp="1606490213025">
+    <state width="1899" height="290" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606539344781" />
+    <state width="1899" height="290" key="GridCell.Tab.0.left" timestamp="1606539344781">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1921" height="298" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606407345169" />
-    <state width="1921" height="298" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606490213025" />
-    <state width="1921" height="298" key="GridCell.Tab.0.right" timestamp="1606490213025">
+    <state width="1899" height="290" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606539344781" />
+    <state width="1899" height="290" key="GridCell.Tab.0.right" timestamp="1606539344781">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1921" height="298" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606407345169" />
-    <state width="1921" height="298" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606490213025" />
-    <state x="440" y="94" key="SettingsEditor" timestamp="1606482054760">
+    <state width="1899" height="290" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606539344781" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1606501242503">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1480" y="94" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606398028068" />
-    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606482054760" />
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606501242503" />
     <state x="-1262" y="411" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1606398527642">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>

@@ -53,7 +53,6 @@ public class tool {
         else if (grade >= 50) return "D";
         else if (grade >= 40) return "F";
         else return "O";
-
     }
 
     public static String[] SpiltString(String ok) {

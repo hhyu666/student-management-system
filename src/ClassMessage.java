@@ -10,7 +10,7 @@ public class ClassMessage {
         BufferedReader br = tool.ReadTxt(classtxt);
         assert br != null;
         String line = br.readLine();
-        String[] course = Segmentation(line);
+        String[] course = tool.SpiltString(line);
         line = br.readLine();
         Course course1 = new Course(course[0], course[1], line);
         int number = course1.getNumber();
@@ -24,11 +24,6 @@ public class ClassMessage {
             space(line);
             StdOut.println();
         }
-    }
-
-    @SuppressFBWarnings("NM_METHOD_NAMING_CONVENTION")
-    public static String[] Segmentation(String ok) {
-        return ok.split(",");
     }
 
     public static void space(String one) {

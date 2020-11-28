@@ -1,19 +1,22 @@
 import java.util.ArrayList;
 
 public class Student {
-    private String SurnName;
-    private String GivenName;
+    private String surnName;
+    private String givenName;
     private String ID;
     private ArrayList<Double> Score = new ArrayList<>();
     private int Credit;
     private int GPA;
 
     public Student(String surnName, String givenName, String ID, double score, int index) {
-        SurnName = surnName;
-        GivenName = givenName;
+        this.surnName = surnName;
+        this.givenName = givenName;
         this.ID = ID;
         Score.add(index, score);
+    }
 
+    public String toString() {
+        return surnName + "," + givenName + "\t" + ID + "\t" + Score.toString();
     }
 
     public String getID() {
@@ -21,11 +24,11 @@ public class Student {
     }
 
     public String getGivenName() {
-        return GivenName;
+        return givenName;
     }
 
     public String getSurnName() {
-        return SurnName;
+        return surnName;
     }
 
     public int getGPA() {
@@ -45,7 +48,7 @@ public class Student {
     }
 
     public void setSurnName(String surnName) {
-        SurnName = surnName;
+        this.surnName = surnName;
     }
 
     public void setID(String ID) {
@@ -61,6 +64,6 @@ public class Student {
     }
 
     public void setGivenName(String givenName) {
-        GivenName = givenName;
+        this.givenName = givenName;
     }
 }

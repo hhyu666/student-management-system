@@ -1,9 +1,11 @@
 import edu.princeton.cs.algs4.StdOut;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 
 public class AddStudent {
+    @SuppressFBWarnings({"NP_DEREFERENCE_OF_READLINE_VALUE", "NM_METHOD_NAMING_CONVENTION"})
     public static void ChooseStudent(String classtxt, int NumberClass, AllStudent allStudent) throws IOException {//处理班级文件
         BufferedReader br = tool.ReadTxt(classtxt);
         assert br != null;
@@ -25,6 +27,7 @@ public class AddStudent {
         }
     }
 
+    @SuppressFBWarnings("NM_METHOD_NAMING_CONVENTION")
     public static int FindStudent(String id, AllStudent allStudent) {
         for (int i = 0; i < allStudent.AllStudent.size(); i++) {
             if (id.equals(allStudent.AllStudent.get(i).getID())) {
@@ -34,6 +37,7 @@ public class AddStudent {
         return -1;
     }
 
+    @SuppressFBWarnings("NM_METHOD_NAMING_CONVENTION")
     public static void UpdateStudent(Student student, double score, int index) {
         student.setScore(score, index);
     }
