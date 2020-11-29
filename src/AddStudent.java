@@ -1,5 +1,4 @@
 import edu.princeton.cs.algs4.StdOut;
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 import java.io.BufferedReader;
 import java.io.IOException;
