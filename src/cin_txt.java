@@ -10,19 +10,27 @@ public class cin_txt {
         int NumberClass = 0;
         StdOut.println("Please enter the database filename:");
 
+
         AllStudent allStudent = new AllStudent();
-        AddStudent.ChooseStudent(StdIn.readLine(), NumberClass, allStudent);
-        StdOut.println(allStudent.AllStudent.toString());
+        String input = StdIn.readLine();
+        StatisticsReports.statisticsReports(input);
+        //AddStudent.ChooseStudent(input, NumberClass, allStudent);
+        allStudent.ClassName.add(tool.SpiltString2(input));
+        //StdOut.println(allStudent.AllStudent.toString());
         NumberClass++;
 
         StdOut.println("Do you have another score report?\n" +
                 "Press \"Y\" for Yes and \"N\" for No.");
         if (StdIn.readLine().equals("Y")) {
             StdOut.println("Please enter the database filename:");
-            AddStudent.ChooseStudent(StdIn.readLine(), NumberClass, allStudent);
-            StdOut.println(allStudent.AllStudent.toString());
+            input = StdIn.readLine();
+            AddStudent.ChooseStudent(input, NumberClass, allStudent);
+            allStudent.ClassName.add(tool.SpiltString2(input));
+            //StdOut.println(allStudent.AllStudent.toString());
         }
-        "i".equals("i");
+
+        StdOut.println("Please input the student ID:");
+        ScoreInquiry.scoreInquiry(StdIn.readLine(), allStudent);
 
 
     }

@@ -40,7 +40,7 @@ public class tool {
 
     @SuppressFBWarnings("NM_METHOD_NAMING_CONVENTION")
 
-    public static String Grade(float grade) {
+    public static String Grade(double grade) {
         if (grade >= 93) return "A+";
         else if (grade >= 88) return "A";
         else if (grade >= 83) return "A-";
@@ -57,5 +57,10 @@ public class tool {
 
     public static String[] SpiltString(String ok) {
         return ok.split(",");
+    }
+
+    public static String SpiltString2(String ok) {
+        String[] okk = ok.split("\\.");
+        return okk[0];
     }
 }

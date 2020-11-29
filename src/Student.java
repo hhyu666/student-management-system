@@ -1,10 +1,10 @@
-import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Student {
     private String surnName;
     private String givenName;
     private String ID;
-    private ArrayList<Double> Score = new ArrayList<>();
+    private Double[] Score = new Double[15];
     private int Credit;
     private int GPA;
 
@@ -12,11 +12,11 @@ public class Student {
         this.surnName = surnName;
         this.givenName = givenName;
         this.ID = ID;
-        Score.add(index, score);
+        Score[index] = score;
     }
 
     public String toString() {
-        return surnName + "," + givenName + "\t" + ID + "\t" + Score.toString();
+        return surnName + "," + givenName + "\t" + ID + "\t" + Arrays.toString(Score);
     }
 
     public String getID() {
@@ -39,8 +39,13 @@ public class Student {
         return Credit;
     }
 
-    public ArrayList<Double> getScore() {
+    public Double[] getScore() {
         return Score;
+    }
+
+    public double getScore(int index) {
+        if (Score[index] == null) return -1.0;
+        return Score[index];
     }
 
     public void setCredit(int credit) {
@@ -56,7 +61,8 @@ public class Student {
     }
 
     public void setScore(double score, int index) {
-        Score.add(index, score);
+
+        Score[index] = score;
     }
 
     public void setGPA(int GPA) {
@@ -65,5 +71,9 @@ public class Student {
 
     public void setGivenName(String givenName) {
         this.givenName = givenName;
+    }
+
+    public int size() {
+        return Score.length;
     }
 }
