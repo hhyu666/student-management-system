@@ -2,6 +2,6 @@ import java.util.ArrayList;
 
 public class AllStudent {
     ArrayList<Student> AllStudent = new ArrayList<>();
-    ArrayList<String> ClassName = new ArrayList<>();
-    ArrayList<String> ClassCredit = new ArrayList<>();
+    ArrayList<Course> courses = new ArrayList<>();
+    ArrayList<Student> nowClassStudent = new ArrayList<>();
 }

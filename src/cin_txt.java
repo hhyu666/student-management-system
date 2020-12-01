@@ -13,9 +13,8 @@ public class cin_txt {
 
         AllStudent allStudent = new AllStudent();
         String input = StdIn.readLine();
-        StatisticsReports.statisticsReports(input);
-        //AddStudent.ChooseStudent(input, NumberClass, allStudent);
-        allStudent.ClassName.add(tool.SpiltString2(input));
+        //StatisticsReports.statisticsReports(input);
+        AddStudent.ChooseStudent(input, NumberClass, allStudent);
         //StdOut.println(allStudent.AllStudent.toString());
         NumberClass++;
 
@@ -25,12 +24,17 @@ public class cin_txt {
             StdOut.println("Please enter the database filename:");
             input = StdIn.readLine();
             AddStudent.ChooseStudent(input, NumberClass, allStudent);
-            allStudent.ClassName.add(tool.SpiltString2(input));
             //StdOut.println(allStudent.AllStudent.toString());
         }
 
-        StdOut.println("Please input the student ID:");
-        ScoreInquiry.scoreInquiry(StdIn.readLine(), allStudent);
+        Methods.SortingOnGPA(allStudent);
+
+
+        //StdOut.println("Please input the student ID:");
+        //ScoreInquiry.scoreInquirybyid(StdIn.readLine(), allStudent);
+
+        StdOut.println("Please input the surname:");
+        ScoreInquiry.scoreInquirybysurname(StdIn.readLine(), allStudent);
 
 
     }

@@ -10,7 +10,9 @@ public class AddStudent {
         BufferedReader br = tool.ReadTxt(classtxt);
         assert br != null;
         String line = br.readLine();
+        String[] name = tool.SpiltString(line);
         line = br.readLine();
+        allStudent.courses.add(new Course(name[0], name[1], line));
         int number = Integer.parseInt(line);
         for (int i = 0; i < number; i++) {
             line = br.readLine();

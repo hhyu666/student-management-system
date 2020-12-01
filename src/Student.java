@@ -6,9 +6,9 @@ public class Student {
     private String ID;
     private Double[] Score = new Double[15];
     private int Credit;
-    private int GPA;
 
-    public Student(String surnName, String givenName, String ID, double score, int index) {
+
+    public Student(String givenName, String surnName, String ID, double score, int index) {
         this.surnName = surnName;
         this.givenName = givenName;
         this.ID = ID;
@@ -31,8 +31,8 @@ public class Student {
         return surnName;
     }
 
-    public int getGPA() {
-        return GPA;
+    public String getName() {
+        return givenName + "," + surnName;
     }
 
     public int getCredit() {
@@ -63,10 +63,6 @@ public class Student {
     public void setScore(double score, int index) {
 
         Score[index] = score;
-    }
-
-    public void setGPA(int GPA) {
-        this.GPA = GPA;
     }
 
     public void setGivenName(String givenName) {

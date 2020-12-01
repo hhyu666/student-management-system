@@ -3,10 +3,11 @@ import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class ClassMessage {
     @SuppressFBWarnings("NP_DEREFERENCE_OF_READLINE_VALUE")
-    public static void deal(String classtxt) throws IOException {//处理班级文件
+    public static void deal(String classtxt, AllStudent allStudent) throws IOException {//处理班级文件
         BufferedReader br = tool.ReadTxt(classtxt);
         assert br != null;
         String line = br.readLine();
@@ -19,8 +20,11 @@ public class ClassMessage {
         StdOut.println("Number of Students:" + course1.getNumber());
         StdOut.println("Name:               Id:                 Score:              Grade:");
 
+        allStudent.nowClassStudent = new ArrayList<>();
+
         for (int i = 0; i < number; i++) {
             line = br.readLine();
+            String[] student = tool.SpiltString(line);
             space(line);
             StdOut.println();
         }

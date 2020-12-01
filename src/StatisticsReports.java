@@ -15,8 +15,7 @@ public class StatisticsReports {
         int number = course1.getNumber();
         StdOut.println("Course Code:" + course1.getName());
         StdOut.println("Credit:" + course1.getCredit());
-
-
+        
         double allscore = 0;
         double averagescore = 0;
         double highestscore = 0;

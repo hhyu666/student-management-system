@@ -59,8 +59,48 @@ public class tool {
         return ok.split(",");
     }
 
-    public static String SpiltString2(String ok) {
-        String[] okk = ok.split("\\.");
-        return okk[0];
+    public static String[] SpiltString2(String ok) {
+        return ok.split("\\.");
+    }
+
+    public static double getGPA(Double[] Score, AllStudent allStudent) {//算gpa
+
+        double gradePointTotal = 0;
+        double gradeOfEachCourseTotal = 0;
+        for (int i = 0; i < allStudent.courses.size(); i++) {
+            if (Score[i] == null) continue;
+            gradePointTotal += pointOfEachCourse(Score[i]) * allStudent.courses.get(i).getCredit();
+            gradeOfEachCourseTotal += allStudent.courses.get(i).getCredit();
+        }
+
+        return Double.parseDouble(new java.text.DecimalFormat("#.00").format(gradePointTotal / gradeOfEachCourseTotal));
+    }
+
+    public static double pointOfEachCourse(double grade) {//根据实际成绩判断学分方法
+        double point = 0.0;
+        if (grade >= 93)
+            point = 4.0;
+        else if (grade >= 88)
+            point = 3.7;
+        else if (grade >= 83)
+            point = 3.3;
+        else if (grade >= 78)
+            point = 3.0;
+        else if (grade >= 72)
+            point = 2.7;
+        else if (grade >= 68)
+            point = 2.3;
+        else if (grade >= 63)
+            point = 2.0;
+        else if (grade >= 58)
+            point = 1.7;
+        else if (grade >= 53)
+            point = 1.3;
+        else if (grade >= 50)
+            point = 1.0;
+        else
+            point = 0.0;
+
+        return point;
     }
 }
