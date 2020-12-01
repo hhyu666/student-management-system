@@ -8,7 +8,7 @@ public class Sort {
         ArrayList<Student> all = allStudent.AllStudent;
         quickSortInternally(allStudent, 0, length - 1);
     }
-    
+
     // 快速排序递归函数，p,r为下标
     private static void quickSortInternally(AllStudent allStudent, int p, int r) {
 
@@ -40,6 +40,42 @@ public class Sort {
         return i;
     }
 
+
+    public static void quickSortScore(AllStudent allStudent, int length) {
+        ArrayList<Student> all = allStudent.AllStudent;
+        quickSortInternallyScore(allStudent, 0, length - 1);
+    }
+
+    // 快速排序递归函数，p,r为下标
+    private static void quickSortInternallyScore(AllStudent allStudent, int p, int r) {
+
+        if (p >= r) return;
+        StdRandom.shuffle(allStudent.nowClassStudent.toArray());
+
+        int q = partitionScore(allStudent, p, r); // 获取分区点
+        quickSortInternallyScore(allStudent, p, q - 1);
+        quickSortInternallyScore(allStudent, q + 1, r);
+    }
+
+    private static int partitionScore(AllStudent allStudent, int p, int r) {
+        double pivot = allStudent.nowClassStudent.get(r).getScore(0);
+        int i = p;
+        for (int j = p; j < r; ++j) {
+            if (allStudent.nowClassStudent.get(j).getScore(0) < pivot) {
+                if (i == j) {
+                    ++i;
+                } else {
+                    Student mid = allStudent.nowClassStudent.get(i);
+                    allStudent.nowClassStudent.set(i++, allStudent.nowClassStudent.get(j));
+                    allStudent.nowClassStudent.set(j, mid);
+                }
+            }
+        }
+        Student mid = allStudent.nowClassStudent.get(i);
+        allStudent.nowClassStudent.set(i, allStudent.nowClassStudent.get(r));
+        allStudent.nowClassStudent.set(r, mid);
+        return i;
+    }
 
 }
 

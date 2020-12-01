@@ -13,6 +13,7 @@ public class cin_txt {
 
         AllStudent allStudent = new AllStudent();
         String input = StdIn.readLine();
+        ClassMessage.deal(input, allStudent);
         //StatisticsReports.statisticsReports(input);
         AddStudent.ChooseStudent(input, NumberClass, allStudent);
         //StdOut.println(allStudent.AllStudent.toString());
@@ -22,6 +23,7 @@ public class cin_txt {
                 "Press \"Y\" for Yes and \"N\" for No.");
         if (StdIn.readLine().equals("Y")) {
             StdOut.println("Please enter the database filename:");
+            ClassMessage.deal(input, allStudent);
             input = StdIn.readLine();
             AddStudent.ChooseStudent(input, NumberClass, allStudent);
             //StdOut.println(allStudent.AllStudent.toString());

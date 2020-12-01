@@ -4,8 +4,8 @@ import java.io.IOException;
 
 public class Methods {
 
-    public static void useClassMessage(String classtxt) throws IOException {
-        ClassMessage.deal(classtxt);
+    public static void useClassMessage(String classtxt, AllStudent allStudent) throws IOException {
+        ClassMessage.deal(classtxt, allStudent);
     }
 
     @SuppressFBWarnings("NM_METHOD_NAMING_CONVENTION")

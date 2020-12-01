@@ -15,6 +15,13 @@ public class Student {
         Score[index] = score;
     }
 
+    public Student(String givenName, String surnName, String id, String s, int index) {
+        this.surnName = surnName;
+        this.givenName = givenName;
+        this.ID = id;
+        Score[index] = Double.valueOf(s);
+    }
+
     public String toString() {
         return surnName + "," + givenName + "\t" + ID + "\t" + Arrays.toString(Score);
     }

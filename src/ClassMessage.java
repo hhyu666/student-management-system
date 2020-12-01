@@ -4,6 +4,7 @@ import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ClassMessage {
     @SuppressFBWarnings("NP_DEREFERENCE_OF_READLINE_VALUE")
@@ -21,24 +22,38 @@ public class ClassMessage {
         StdOut.println("Name:               Id:                 Score:              Grade:");
 
         allStudent.nowClassStudent = new ArrayList<>();
+        StdOut.println("Please choose the sorting field:");
+        StdOut.println("(1) Surname; (2) ID; (3) Score; (4) Grade");
+
 
         for (int i = 0; i < number; i++) {
             line = br.readLine();
             String[] student = tool.SpiltString(line);
-            space(line);
-            StdOut.println();
+            allStudent.nowClassStudent.add(new Student(student[0], student[1], student[2], student[3], 0));
+
+            //space(line);
+            //StdOut.println();
         }
+        //sort!!!
+        Sort.quickSortScore(allStudent, allStudent.nowClassStudent.size());
+        Collections.reverse(allStudent.nowClassStudent);
+
+        for (Student student : allStudent.nowClassStudent) {
+            space(student);
+            StdOut.println("");
+        }
+
     }
 
-    public static void space(String one) {
-        String[] array1 = one.split(",");
-        String ok1 = array1[0] + "," + array1[1];
-        System.out.printf("%-20s", ok1);
-        for (int i = 2; i < array1.length; i++) {
-            System.out.printf("%-20s", array1[i]);//根据空格切分}
-        }
-        float grade = Float.parseFloat(array1[array1.length - 1]);
-        System.out.print(tool.Grade(grade));
+    private static void space(Student student) {
+
+        System.out.printf("%-20s", student.getName());
+
+        System.out.printf("%-20s", student.getID());
+
+        System.out.printf("%-20s", student.getScore(0));
+
+        System.out.print(tool.Grade(student.getScore(0)));
 
     }
 
