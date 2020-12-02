@@ -1,11 +1,9 @@
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
-
 import java.io.*;
 import java.util.Objects;
 
 public class tool {
 
-    @SuppressFBWarnings({"DM_DEFAULT_ENCODING", "OS_OPEN_STREAM", "NP_DEREFERENCE_OF_READLINE_VALUE", "NM_METHOD_NAMING_CONVENTION"})
+
     public static BufferedReader ReadTxt(String classtxt) {/* 读班级TXT文件 */
         try {
             String pathname = Objects.requireNonNull(cin_txt.class.getClassLoader().getResource(classtxt)).getPath();// 相对路径
@@ -19,7 +17,7 @@ public class tool {
         return null;
     }
 
-    @SuppressFBWarnings("DM_DEFAULT_ENCODING")
+
     public static void WriteTxt() throws IOException {
         /* 写入Txt文件 */
         try {
@@ -37,8 +35,6 @@ public class tool {
         }
     }
 
-
-    @SuppressFBWarnings("NM_METHOD_NAMING_CONVENTION")
 
     public static String Grade(double grade) {
         if (grade >= 93) return "A+";

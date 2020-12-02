@@ -1,5 +1,4 @@
 import edu.princeton.cs.algs4.StdOut;
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class ClassMessage {
-    @SuppressFBWarnings("NP_DEREFERENCE_OF_READLINE_VALUE")
+
     public static void deal(String classtxt, AllStudent allStudent) throws IOException {//处理班级文件
         BufferedReader br = tool.ReadTxt(classtxt);
         assert br != null;
