@@ -7,6 +7,7 @@ public class cin_txt {
 
 
     public static void main(String[] args) throws IOException {
+        
         int NumberClass = 0;
         StdOut.println("Please enter the database filename:");
 

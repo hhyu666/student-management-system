@@ -77,6 +77,43 @@ public class Sort {
         return i;
     }
 
+
+    public static void quickSortSurnName(AllStudent allStudent, int length) {
+        ArrayList<Student> all = allStudent.AllStudent;
+        quickSortInternallySurnName(allStudent, 0, length - 1);
+    }
+
+    // 快速排序递归函数，p,r为下标
+    private static void quickSortInternallySurnName(AllStudent allStudent, int p, int r) {
+
+        if (p >= r) return;
+        StdRandom.shuffle(allStudent.AllStudent.toArray());
+
+        int q = partitionSurnName(allStudent, p, r); // 获取分区点
+        quickSortInternallySurnName(allStudent, p, q - 1);
+        quickSortInternallySurnName(allStudent, q + 1, r);
+    }
+
+    private static int partitionSurnName(AllStudent allStudent, int p, int r) {
+        String pivot = allStudent.nowClassStudent.get(r).getGivenName();
+        int i = p;
+        for (int j = p; j < r; ++j) {
+            if (pivot.compareTo(allStudent.nowClassStudent.get(j).getGivenName()) > 0) {
+                if (i == j) {
+                    ++i;
+                } else {
+                    Student mid = allStudent.nowClassStudent.get(i);
+                    allStudent.nowClassStudent.set(i++, allStudent.nowClassStudent.get(j));
+                    allStudent.nowClassStudent.set(j, mid);
+                }
+            }
+        }
+        Student mid = allStudent.nowClassStudent.get(i);
+        allStudent.nowClassStudent.set(i, allStudent.nowClassStudent.get(r));
+        allStudent.nowClassStudent.set(r, mid);
+        return i;
+    }
+
 }
 
 

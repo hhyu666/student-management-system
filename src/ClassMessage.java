@@ -3,7 +3,6 @@ import edu.princeton.cs.algs4.StdOut;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class ClassMessage {
 
@@ -15,14 +14,13 @@ public class ClassMessage {
         line = br.readLine();
         Course course1 = new Course(course[0], course[1], line);
         int number = course1.getNumber();
+        StdOut.println("Please choose the sorting field:");
+        StdOut.println("(1) Surname; (2) ID; (3) Score; (4) Grade");
+        allStudent.nowClassStudent = new ArrayList<>();
         StdOut.println("Course Code:" + course1.getName());
         StdOut.println("Credit:" + course1.getCredit());
         StdOut.println("Number of Students:" + course1.getNumber());
         StdOut.println("Name:               Id:                 Score:              Grade:");
-
-        allStudent.nowClassStudent = new ArrayList<>();
-        StdOut.println("Please choose the sorting field:");
-        StdOut.println("(1) Surname; (2) ID; (3) Score; (4) Grade");
 
 
         for (int i = 0; i < number; i++) {
@@ -34,8 +32,9 @@ public class ClassMessage {
             //StdOut.println();
         }
         //sort!!!
-        Sort.quickSortScore(allStudent, allStudent.nowClassStudent.size());
-        Collections.reverse(allStudent.nowClassStudent);
+        //Sort.quickSortScore(allStudent, allStudent.nowClassStudent.size());
+        Sort.quickSortSurnName(allStudent, allStudent.nowClassStudent.size());
+        //Collections.reverse(allStudent.nowClassStudent);
 
         for (Student student : allStudent.nowClassStudent) {
             space(student);
