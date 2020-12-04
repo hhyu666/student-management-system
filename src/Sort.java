@@ -114,6 +114,42 @@ public class Sort {
         return i;
     }
 
+    public static void quickSortID(AllStudent allStudent, int length) {
+        ArrayList<Student> all = allStudent.AllStudent;
+        quickSortInternallyID(allStudent, 0, length - 1);
+    }
+
+    // 快速排序递归函数，p,r为下标
+    private static void quickSortInternallyID(AllStudent allStudent, int p, int r) {
+
+        if (p >= r) return;
+        StdRandom.shuffle(allStudent.AllStudent.toArray());
+
+        int q = partitionID(allStudent, p, r); // 获取分区点
+        quickSortInternallyID(allStudent, p, q - 1);
+        quickSortInternallyID(allStudent, q + 1, r);
+    }
+
+    private static int partitionID(AllStudent allStudent, int p, int r) {
+        String pivot = allStudent.nowClassStudent.get(r).getID();
+        int i = p;
+        for (int j = p; j < r; ++j) {
+            if (pivot.compareTo(allStudent.nowClassStudent.get(j).getID()) > 0) {
+                if (i == j) {
+                    ++i;
+                } else {
+                    Student mid = allStudent.nowClassStudent.get(i);
+                    allStudent.nowClassStudent.set(i++, allStudent.nowClassStudent.get(j));
+                    allStudent.nowClassStudent.set(j, mid);
+                }
+            }
+        }
+        Student mid = allStudent.nowClassStudent.get(i);
+        allStudent.nowClassStudent.set(i, allStudent.nowClassStudent.get(r));
+        allStudent.nowClassStudent.set(r, mid);
+        return i;
+    }
+
 }
 
 

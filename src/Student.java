@@ -4,8 +4,7 @@ public class Student {
     private String surnName;
     private String givenName;
     private String ID;
-    private Double[] Score = new Double[15];
-    private int Credit;
+    private Double[] Score = new Double[100];
 
 
     public Student(String givenName, String surnName, String ID, double score, int index) {
@@ -42,10 +41,6 @@ public class Student {
         return givenName + "," + surnName;
     }
 
-    public int getCredit() {
-        return Credit;
-    }
-
     public Double[] getScore() {
         return Score;
     }
@@ -53,10 +48,6 @@ public class Student {
     public double getScore(int index) {
         if (Score[index] == null) return -1.0;
         return Score[index];
-    }
-
-    public void setCredit(int credit) {
-        Credit = credit;
     }
 
     public void setSurnName(String surnName) {
@@ -79,4 +70,6 @@ public class Student {
     public int size() {
         return Score.length;
     }
+
+
 }
