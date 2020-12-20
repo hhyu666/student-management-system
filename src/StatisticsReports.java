@@ -1,23 +1,27 @@
 import edu.princeton.cs.algs4.StdOut;
 
-import java.io.BufferedReader;
-import java.io.IOException;
+import java.io.*;
+import java.util.Objects;
 
 public class StatisticsReports {
 
-    public static void statisticsReports(String classtxt) throws IOException {
-        BufferedReader br = tool.ReadTxt(classtxt);
-        assert br != null;
-        String line = br.readLine();
-        String[] course = tool.SpiltString(line);
-        line = br.readLine();
-        Course course1 = new Course(course[0], course[1], line);
-        int number = course1.getNumber();
-        StdOut.println("Course Code:" + course1.getName());
-        StdOut.println("Credit:" + course1.getCredit());
-        
-        double allscore = 0;
-        double averagescore = 0;
+    public static void statisticsReports(String classPath) throws IOException {
+
+        String pathname = Objects.requireNonNull(Main.class.getClassLoader().getResource(classPath)).getPath();
+        BufferedReader bf = new BufferedReader(new InputStreamReader(new FileInputStream(new File(pathname))));
+
+        String[] buf_info = new String[2];
+        for (int i = 0; i < 2; i++) {
+            buf_info[i] = bf.readLine();
+        }
+        Course temp_course = new Course(buf_info);
+        int number = temp_course.getClassSize();
+
+        StdOut.println("Course Code:" + temp_course.getCourseCode());
+        StdOut.println("Credit:" + temp_course.getCredit());
+
+        double totalScore = 0;
+        double averagescore;
         double highestscore = 0;
         double lowestscore = 100;
         int Aplus = 0;
@@ -32,12 +36,12 @@ public class StatisticsReports {
         int D = 0;
         int F = 0;
 
-
+        String line;
         for (int i = 0; i < number; i++) {
-            line = br.readLine();
-            String[] student = tool.SpiltString(line);
+            line = bf.readLine();
+            String[] student = line.split(",");
             double score = Double.parseDouble(student[3]);
-            allscore += score;
+            totalScore += score;
             if (highestscore < score) highestscore = score;
             if (lowestscore > score) lowestscore = score;
             if (score >= 93) Aplus++;
@@ -52,7 +56,7 @@ public class StatisticsReports {
             else if (score >= 50) D++;
             else if (score >= 40) F++;
         }
-        averagescore = allscore / number;
+        averagescore = totalScore / number;
 
         StdOut.println("The average score:" + averagescore);
         StdOut.println("The highest score:" + highestscore);

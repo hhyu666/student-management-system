@@ -1,37 +1,31 @@
 public class Course {
-    private String name;
-    private int Credit;
-    private int number;
+    private final String courseCode;
+    private final int credit;
+    private final int classSize;
 
-    public Course(String name, String credit, String number) {
-        this.name = name;
-        this.Credit = Integer.parseInt(credit);
-        this.number = Integer.parseInt(number);
+    public Course(String[] buf_info) {
+        String[] temp_courseCode_credit = buf_info[0].split(",");
+        String temp_classSize = buf_info[1];
+
+        this.courseCode = temp_courseCode_credit[0];
+        this.credit = Integer.parseInt(temp_courseCode_credit[1]);
+        this.classSize = Integer.parseInt(temp_classSize);
     }
 
-    public String getName() {
-        return name;
+    public String toString() {
+        return courseCode + " " + credit + "\n" + classSize;
+    }
+
+    public String getCourseCode() {
+        return courseCode;
     }
 
     public int getCredit() {
-        return Credit;
+        return credit;
     }
 
-    public int getNumber() {
-        return number;
+    public int getClassSize() {
+        return classSize;
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setCredit(int credit) {
-        this.Credit = credit;
-    }
-
-    public void setNumber(int number) {
-        this.number = number;
-    }
-
 
 }

@@ -25,9 +25,6 @@
     <toolWindowToFront>false</toolWindowToFront>
     <toolWindowEditorPreview>false</toolWindowEditorPreview>
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/AddStudent.java" root0="SKIP_INSPECTION" />
-  </component>
   <component name="ProjectId" id="1koVxKu4Ef13aQcJVX38fFLnOwH" />
   <component name="ProjectViewState">
     <option name="abbreviatePackageNames" value="true" />
@@ -57,10 +54,18 @@
       <recent name="C:\Users\84276\IdeaProjects\student\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.cin_txt">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="student" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Sort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Sort" />
@@ -100,14 +105,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="text" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="text" />
-      <module name="student" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -117,11 +114,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.cin_txt" />
         <item itemvalue="Application.SortingOnGPA" />
         <item itemvalue="Application.Sort" />
         <item itemvalue="Application.tet" />
-        <item itemvalue="Application.text" />
       </list>
     </recent_temporary>
   </component>
@@ -130,29 +127,29 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="695" y="297" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606916948145" />
-    <state width="1899" height="209" key="GridCell.Tab.0.bottom" timestamp="1607075805247">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1515" height="156" key="GridCell.Tab.0.bottom" timestamp="1608456112632">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1921" height="298" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606407345169" />
-    <state width="1513" height="113" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606555157692" />
+    <state width="1515" height="156" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608456112632" />
     <state width="1899" height="209" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607075805247" />
-    <state width="1899" height="209" key="GridCell.Tab.0.center" timestamp="1607075805247">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1515" height="156" key="GridCell.Tab.0.center" timestamp="1608456112631">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1921" height="298" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606407345169" />
-    <state width="1513" height="113" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606555157692" />
+    <state width="1515" height="156" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1608456112631" />
     <state width="1899" height="209" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607075805247" />
-    <state width="1899" height="209" key="GridCell.Tab.0.left" timestamp="1607075805247">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1515" height="156" key="GridCell.Tab.0.left" timestamp="1608456112631">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1921" height="298" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606407345169" />
-    <state width="1513" height="113" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606555157692" />
+    <state width="1515" height="156" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1608456112631" />
     <state width="1899" height="209" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607075805247" />
-    <state width="1899" height="209" key="GridCell.Tab.0.right" timestamp="1607075805247">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1515" height="156" key="GridCell.Tab.0.right" timestamp="1608456112631">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1921" height="298" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606407345169" />
-    <state width="1513" height="113" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606555157692" />
+    <state width="1515" height="156" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1608456112631" />
     <state width="1899" height="209" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607075805247" />
     <state x="380" y="105" key="SettingsEditor" timestamp="1606916954994">
       <screen x="0" y="0" width="1920" height="1040" />

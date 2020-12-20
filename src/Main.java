@@ -3,25 +3,25 @@ import edu.princeton.cs.algs4.StdOut;
 
 import java.io.IOException;
 
-public class cin_txt {
+public class Main {
 
 
     public static void main(String[] args) throws IOException {
 
-        int NumberClass = 0;
+        int numberClass = 0;
         StdOut.println("Please enter the database filename:");
         AllStudent allStudent = new AllStudent();
         String input = StdIn.readLine();
-        AddStudent.ChooseStudent(input, NumberClass, allStudent);
-        NumberClass++;
+        StudentFileIO.readFile(input, numberClass, allStudent);
+        numberClass++;
         while (true) {
             StdOut.println("Do you have another score report?\n" +
                     "Press \"Y\" for Yes and \"N\" for No.");
             if (StdIn.readLine().equals("Y")) {
                 StdOut.println("Please enter the database filename:");
                 input = StdIn.readLine();
-                AddStudent.ChooseStudent(input, NumberClass, allStudent);
-                NumberClass++;
+                StudentFileIO.readFile(input, numberClass, allStudent);
+                numberClass++;
             } else break;
         }
         do {
@@ -38,28 +38,28 @@ public class cin_txt {
                 case "1":
                     StdOut.println("Please choose the course code first:");
                     input = StdIn.readLine() + ".txt";
-                    Methods.useClassMessage(input, allStudent);
+                    ClassMassage.deal(input, allStudent);
                     break;
                 case "2":
                     StdOut.println("Please choose the course code first:");
                     input = StdIn.readLine() + ".txt";
-                    Methods.StatisticsReports(input);
+                    StatisticsReports.statisticsReports(input);
                     break;
                 case "3":
                     StdOut.println("Please input the student ID:");
-                    Methods.ScoreInquirybyid(StdIn.readLine(), allStudent);
+                    ScoreInquiry.scoreInquirybyid(StdIn.readLine(), allStudent);
 
                     break;
                 case "4":
-                    Methods.SortingOnGPA(allStudent);
+                    SortingOnGPA.sorting(allStudent);
                     break;
                 case "5":
                     StdOut.println("Please input the surname:");
-                    Methods.ScoreInquirybysurmsname(StdIn.readLine(), allStudent);
+                    ScoreInquiry.scoreInquirybysurname(StdIn.readLine(), allStudent);
                     break;
                 default:
                     StdOut.println("Please input the surname:");
-                    Methods.scoreInquiryBySurnameWithWildCards(StdIn.readLine(), allStudent);
+                    ScoreInquiry.scoreInquiryBySurnameWithWildCards(StdIn.readLine(), allStudent);
                     break;
             }
 
